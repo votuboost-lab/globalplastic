@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 74% 16%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 74% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 74% 16%;
+
+    --primary: 215 74% 16%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 105 46% 51%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 215 20% 50%;
+
+    --accent: 201 61% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 91%;
+    --input: 0 0% 91%;
+    --ring: 105 46% 51%;
+
+    --radius: 0.5rem;
+
+    /* Custom Global Plastic tokens */
+    --navy: 215 74% 16%;
+    --green: 105 46% 51%;
+    --light-blue: 201 61% 58%;
+    --light-gray: 0 0% 96%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--light-gray)) 100%);
+    
+    --shadow-card: 0 4px 20px rgba(12, 33, 73, 0.08);
+    --shadow-hover: 0 8px 30px rgba(12, 33, 73, 0.12);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 74% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 215 60% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 215 74% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 105 46% 51%;
+    --primary-foreground: 215 74% 16%;
+
+    --secondary: 201 61% 58%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 215 50% 15%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 201 61% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 50% 15%;
+    --input: 215 50% 15%;
+    --ring: 105 46% 51%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+/* Parallax effect */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* WhatsApp pulse animation */
+@keyframes pulse-green {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.pulse-green {
+  animation: pulse-green 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
