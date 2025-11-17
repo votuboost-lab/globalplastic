@@ -1,5 +1,5 @@
 import parallaxBg from "@/assets/parallax-bg.jpg";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-green.png";
 
 const ParallaxSection = () => {
   return (
@@ -19,7 +19,7 @@ const ParallaxSection = () => {
       </div>
       
       <div className="absolute bottom-8 right-8 opacity-10">
-        <img src={logo} alt="Global Plastic" className="h-32 brightness-0 invert" />
+        <img src={logo} alt="Global Plastic" className="h-32" loading="lazy" />
       </div>
     </section>
   );
