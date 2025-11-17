@@ -6,7 +6,7 @@ import product06cm from "@/assets/product-06cm-new.png";
 import productMadeira from "@/assets/product-madeira-new.png";
 import productCanto from "@/assets/product-canto-new.png";
 import productCantoneira from "@/assets/product-cantoneira-new.png";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-green.png";
 
 const products = [
   {
@@ -63,6 +63,7 @@ const Products = () => {
                   src={product.image}
                   alt={product.name}
                   className="w-full h-64 object-contain p-6"
+                  loading="lazy"
                 />
               </CardHeader>
               <CardContent className="p-6">
@@ -85,7 +86,7 @@ const Products = () => {
         </div>
 
         <div className="flex justify-end mt-8">
-          <img src={logo} alt="Global Plastic" className="h-16 opacity-20" />
+          <img src={logo} alt="Global Plastic" className="h-16 opacity-20" loading="lazy" />
         </div>
       </div>
     </section>

@@ -40,6 +40,7 @@ const About = () => {
               src={factoryImg}
               alt="Fábrica Global Plastic"
               className="rounded-lg shadow-2xl w-full h-auto"
+              loading="lazy"
             />
             <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-secondary/10 rounded-lg -z-10"></div>
             <div className="absolute -top-6 -left-6 w-48 h-48 bg-accent/10 rounded-lg -z-10"></div>
